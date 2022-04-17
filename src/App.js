@@ -35,13 +35,13 @@ class App extends React.Component{
     if(!dataIsloaded)return <div><h1>
         Please wait some time....
         </h1></div>;
+
+       
+        
     return (
         <div className="App">
-          <h1>Fetch data from an api in react </h1>{
-               items.map((item) => {item.results.lists[704].books.primary_isbn10} )
-                
-            }
-
+            <h1>Fetch data from an api in react </h1>
+          {/* items.results.lists */}
 
         </div>
       );
