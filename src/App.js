@@ -3,19 +3,37 @@ import React, { Component } from "react";
 import  './App.css';
 import { LineChart } from "./components/LineChart";
 import { PieChart  } from "./components/PieChart";
-// import {DataSetGeter} from "./DataControler/dataSetGeter";
+
 
 class App extends Component{
-  
-    render(){
-    // const { dataIsloaded, items}  = this.state;
-    // if(!dataIsloaded)return <div className="notice"><h1>
-    //     Please wait some time....
-    //     </h1></div>;
+  constructor(props){
+    super(props);
+    
+    this.state = {
+        dataIsloaded    : false,
+        items           : []
+    };
+    
+}
+componentDidMount(){
+    const API = "https://api.nytimes.com/svc/books/v3/lists/full-overview.json?api-key=E5wuuKKgyA3aFZPjAT80A9PUMoEmGVWK";
+    fetch(API)
+    .then((res) => res.json())
+    .then((json) => {
+        this.setState({
+            items           :json,
+            dataIsloaded    :true 
+        });
+    })
+    
+}
 
-    // console.log(items.results.lists[0].list_id)
-  
- 
+  render(){ 
+    const { items } = this.state;
+    //TODO Change Source from static to API method
+    console.log( );
+
+    
     return (
         <div className="App">
             <div>
