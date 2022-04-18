@@ -36,12 +36,12 @@ class App extends React.Component{
         Please wait some time....
         </h1></div>;
 
-       
+    console.log(items.results.lists[0])
         
     return (
         <div className="App">
             <h1>Fetch data from an api in react </h1>
-          {/* items.results.lists */}
+           
 
         </div>
       );
