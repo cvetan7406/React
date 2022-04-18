@@ -1,14 +1,13 @@
 
-import React, { Component, useState } from "react";
-import BarChart from "./components/BarChart";
-import {userData} from './data'
+import React, { Component } from "react";
+
 
 
 const API = "https://api.nytimes.com/svc/books/v3/lists/full-overview.json?api-key=E5wuuKKgyA3aFZPjAT80A9PUMoEmGVWK";
 
 
 
-class App extends React.Component{
+class App extends   Component{
     //конструктор
     constructor(props){
         super(props);
@@ -41,12 +40,13 @@ class App extends React.Component{
         </h1></div>;
 
     // console.log(items.results.lists[0].list_id)
-    const [userData, setUserData] = useState()
+  
+ 
     return (
         <div className="App">
-            <BarChart
             
-            />
+           
+            
         </div>
       );
   }
